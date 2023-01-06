@@ -21,28 +21,26 @@ public class Main {
                 String input = in.nextLine();
                 if (input.equalsIgnoreCase("help")) {
                     System.out.println(help);
-                    System.out.println("Введите данные для вычисления: ");
-                    input = in.nextLine();
-                }
-                if (input.equalsIgnoreCase("exit")) {
+                } else if (input.equalsIgnoreCase("exit")) {
                     break;
-                }
-                String[] input_data = input.split(" ");
-
-                int a = Integer.parseInt(input_data[0]);
-                int b = Integer.parseInt(input_data[2]);
-                String arithmetic_operation = input_data[1];
-
-                if ((a >= 1 && a <= 10) && (b >= 1 && b <= 10)) {
-                    switch (arithmetic_operation) {
-                        case "+" -> System.out.println(a + b);
-                        case "-" -> System.out.println(a - b);
-                        case "*" -> System.out.println(a * b);
-                        case "/" -> System.out.println(a / b);
-                        default -> throw new Exception();
-                    }
                 } else {
-                    throw new Exception();
+                    String[] input_data = input.split(" ");
+
+                    int a = Integer.parseInt(input_data[0]);
+                    int b = Integer.parseInt(input_data[2]);
+                    String arithmetic_operation = input_data[1];
+
+                    if ((a >= 1 && a <= 10) && (b >= 1 && b <= 10)) {
+                        switch (arithmetic_operation) {
+                            case "+" -> System.out.println(a + b);
+                            case "-" -> System.out.println(a - b);
+                            case "*" -> System.out.println(a * b);
+                            case "/" -> System.out.println(a / b);
+                            default -> throw new Exception();
+                        }
+                    } else {
+                        throw new Exception();
+                    }
                 }
             }
         } catch (Exception exception) {
