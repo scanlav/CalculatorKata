@@ -39,7 +39,7 @@ public class Main {
                         case "-" -> System.out.println(a - b);
                         case "*" -> System.out.println(a * b);
                         case "/" -> System.out.println(a / b);
-                        default -> throw new Exception("Неизвестная операция: " + arithmetic_operation);
+                        default -> throw new Exception();
                     }
                 } else {
                     throw new Exception();
