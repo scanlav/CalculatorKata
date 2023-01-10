@@ -9,11 +9,9 @@ public class Main {
             System.out.println("Введите данные в формате \"a + b\"");
             String input = scanner.nextLine();
             String result_data = calc(input);
+            System.out.println(result_data);
             if (result_data == "throws Exception") {
-                System.out.println(result_data);
                 break;
-            } else {
-                System.out.println(result_data);
             }
         }
 
