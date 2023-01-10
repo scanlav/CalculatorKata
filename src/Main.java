@@ -1,20 +1,21 @@
-
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-//        System.out.println(calc("1 # 2"));
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println(calc("1 + 2"));
-        System.out.println(calc("1 / 5"));
-        System.out.println(calc("5 - 1"));
-        System.out.println(calc("2 * 9"));
-
-//        System.out.println(calc("20 + 4"));
-
-//        System.out.println(calc("1"));
-
-//        System.out.println(calc("1 + 2 + 3"));
+        while (true) {
+            System.out.println("Введите данные в формате \"a + b\"");
+            String input = scanner.nextLine();
+            String result_data = calc(input);
+            if (result_data == "throws Exception") {
+                System.out.println(result_data);
+                break;
+            } else {
+                System.out.println(result_data);
+            }
+        }
 
     }
     public static String calc(String input) {
